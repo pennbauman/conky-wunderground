@@ -5,7 +5,7 @@ sleep 10
 
 /usr/bin/python2 $HOME/git/conky_wunderground_scripts/wunderground_daily_forecast.py 77070 7 > /tmp/daily-forecast-$USER &
 /usr/bin/python2 $HOME/git/conky_wunderground_scripts/wunderground_hourly_forecast.py 77070 17 > /tmp/hourly-forecast-$USER &
-curl -m 60 http://ipecho.net/plain -o /tmp/pub-ip-$USER &
+$HOME/git/conky_wunderground_scripts/pubip.sh &
 
 sleep 10 && conky -dq &
 
@@ -14,6 +14,6 @@ while true; do
 	/usr/bin/python2 $HOME/git/conky_wunderground_scripts/wunderground_daily_forecast.py 77070 7 > /tmp/daily-forecast-$USER &
 	/usr/bin/python2 $HOME/git/conky_wunderground_scripts/wunderground_hourly_forecast.py 77070 17 > /tmp/hourly-forecast-$USER &
 	if [ ! -e /tmp/pub-ip-$USER ]; then
-		curl -m 60 http://ipecho.net/plain -o /tmp/pub-ip-$USER &
+		$HOME/git/conky_wunderground_scripts/pubip.sh &
 	fi
 done
