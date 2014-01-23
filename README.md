@@ -18,13 +18,18 @@ These scripts by default read your API key from a file in ~/.api/wunderground wh
 When run, these scripts just print the formatted output. To make use of it in conky you'll need to add the following lines to your .conkyrc where refresh\_interval is measured in seconds (I usually use 600, i.e. 10 minutes), and zipcode, number\_of\_hours, and number\_of\_days should be self-explanatory:
 
 ### Hourly Forecast
-	execi refresh_interval /usr/bin/python /path/to/wunderground_hourly_forecast.py zipcode number_of_hours
+	execi refresh_interval /usr/bin/env python2 /path/to/wunderground_hourly_forecast.py zipcode number_of_hours
 
 ### Daily Forecast
-	execi refresh_interval /usr/bin/python /path/to/wunderground_daily_forecast.py zipcode number_of_days
+	execi refresh_interval /usr/bin/env python2 /path/to/wunderground_daily_forecast.py zipcode number_of_days
 
 ### Current Conditions
-	execi interval /usr/bin/python /path/to/wunderground_current.py zipcode
+	execi refresh_interval /usr/bin/env python2 /path/to/wunderground_current.py zipcode
+
+Note that the path to /usr/bin/env may differ on your system; you can probably get away with "execi refresh_interval python2" though full paths are good practice. I haven't tested this with python 3.
+
+### Runner Files
+Included are shell scripts that I've used to implement these scripts on different machines; I'm not yet sure whether these should be kept separate and formalized. In any event they're currently very specific to my implementation and should be taken as a reference at best.
 
 ## Output Format
 
