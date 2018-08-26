@@ -7,7 +7,6 @@ import datetime
 # Time
 now = datetime.datetime.now()
 
-
 # Extract command line arguments and grab the wunderground API key
 location = sys.argv[1]
 apiKey = open(os.getenv('HOME') + '/.api/wunderground', 'r').readline().split('\n')[0]
@@ -26,7 +25,7 @@ f.close()
 parsed_json = json.loads(json_string)
 forecast = parsed_json['forecast']['simpleforecast']['forecastday']
 
-#Set a dictionary for parsing the icon field to a smaller text
+# Convert weather codes to readable
 icons = {'chanceflurries' : 'Chance of Flurries',
 	'chancerain' : 'Chance of Rain',
 	'chancesleet' : 'Chance of Sleet',
@@ -53,6 +52,7 @@ icons = {'chanceflurries' : 'Chance of Flurries',
 cond = icons[str(current['icon'])]
 cond = "%s%s" % (cond[0].upper(), cond[1:])
 
+# Write data to weather.txt
 file = open(sys.path[0] + "/weather_save.txt", "w")
 lines = [
 	now.strftime("%Y-%m-%d %H:%M"), #timestamp
@@ -71,10 +71,8 @@ lines = [
 	str(forecast[1]['pop']), # 10 tomorrow's expected rain chance (%)
 	str(forecast[1]['qpf_allday']['in']), # 11 tomorrow's expected rain fall (in.)	
 ]
-#print(lines)
 text = ""
 for line in lines:
 	text = text + line + "\n"
-
 file.write(text)
 file.close()

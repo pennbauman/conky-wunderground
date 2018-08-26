@@ -6,8 +6,9 @@ Based on [conky_wunderground_scripts](https://github.com/iwvelando/conky_wunderg
 
 ## Installation
 
-Clone to your computer into ~/.conky/
+Clone into ~/.conky/
 
+	cd ~/.conky/
 	git clone git@gitlab.com:pennbauman/conky-wunderground.git
 
 Get an api key from [wunderground.com](https://www.wunderground.com/weather/api/) and put as the first and only line in ~/.api/wunderground 
@@ -26,17 +27,17 @@ Each time you want to include weather in your conky use this code:
 
 Replace 0 with the number of the data you want, numbers listed below:
 
-	0 => current temperature
-	1 => current condition
-	2 => today's expected low temperature
-	3 => today's expected high temperature
-	4 => today's expected condition
-	5 => today's expected rain chance (%)
-	6 => today's expected rain fall (in.)
-	7 => tomorrow's expected low temperature
-	8 => tomorrow's expected high temperature
-	9 => tomorrow's expected condition
+	 0 => current temperature
+	 1 => current condition
+	 2 => today's expected low temperature
+	 3 => today's expected high temperature
+	 4 => today's expected condition
+	 5 => today's expected rain chance (%)
+	 6 => today's expected rain fall (in.)
+	 7 => tomorrow's expected low temperature
+	 8 => tomorrow's expected high temperature
+	 9 => tomorrow's expected condition
 	10 => tomorrow's expected rain chance (%)
 	11 => tomorrow's expected rain fall (in.)	
 
-If you don't install the scripts in ~/.conky/ change the paths in reflect the actually locations of the scripts. 
+If you didn't install the scripts in ~/.conky/ change the paths to reflect the actually locations of the scripts. 

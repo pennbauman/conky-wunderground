@@ -1,11 +1,12 @@
 import sys
 import os
 
+# Get data number
 item = sys.argv[1]
 item = int(item)
 item += 2
-#data = open(os.getenv('HOME') + "/.conky/wunderground_scripts/weather_save.txt", "r")
+# Read data from weather_save.txt
 data = open(sys.path[0] + "/weather_save.txt", "r")
 data = data.read().split('\n')[item]
-#file.close()
+# Print data
 print(data)
