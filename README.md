@@ -2,7 +2,7 @@
 
 A set of scripts to get basic weather information on conky. 
 
-Based on [conky_wunderground_scripts](https://github.com/iwvelando/conky_wunderground_scripts) by [iwvelando](https://github.com/iwvelando)
+Losely based on [conky_wunderground_scripts](https://github.com/iwvelando/conky_wunderground_scripts) by [iwvelando](https://github.com/iwvelando)
 
 ## Installation
 

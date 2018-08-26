@@ -1,5 +1,4 @@
 import sys
-import os
 
 # Get data number
 item = sys.argv[1]
