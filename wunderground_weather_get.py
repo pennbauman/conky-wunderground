@@ -53,7 +53,7 @@ icons = {'chanceflurries' : 'Chance of Flurries',
 cond = icons[str(current['icon'])]
 cond = "%s%s" % (cond[0].upper(), cond[1:])
 
-file = open(os.getenv('HOME') + "/.conky/wunderground_scripts/weather_save.txt", "w")
+file = open(sys.path[0] + "/weather_save.txt", "w")
 lines = [
 	now.strftime("%Y-%m-%d %H:%M"), #timestamp
 	"",
@@ -69,7 +69,7 @@ lines = [
 	str(forecast[1]['high']['fahrenheit']), # 8 tomorrow's expected high temp
 	icons[str(forecast[1]['icon'])], # 9 tomorrow's expected cond
 	str(forecast[1]['pop']), # 10 tomorrow's expected rain chance (%)
-	str(forecast[1]['qpf_allday']['in']), #11 tomorrow's expected rain fall (in.)	
+	str(forecast[1]['qpf_allday']['in']), # 11 tomorrow's expected rain fall (in.)	
 ]
 #print(lines)
 text = ""
