@@ -1,15 +1,15 @@
-Time: 2018-08-27 19:08:43
-Zip:  22904
+Time: <time stamp>
+Zip:  <zip code>
 
-82
-Clear
-71
-93
-Partly Cloudy
-20
-0.0
-72
-95
-Clear
-10
-0.0
+<current temperature>
+<current condition>
+<todays low temperature>
+<todays high temperature>
+<toadys condition>
+<todays chance of rain>
+<todays inches of rain>
+<tommorows low temperature>
+<tommorows high temperature>
+<tommorows condition>
+<tommorows chance of rain>
+<tommorows inches of rain>
