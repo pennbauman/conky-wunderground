@@ -40,4 +40,6 @@ Replace 0 with the number of the data you want, numbers listed below:
 	10 => tomorrow's expected rain chance (%)
 	11 => tomorrow's expected rain fall (in.)	
 
+An example version of this code in use in available in the EXAMPLE_CONKY.txt file. 
+
 If you didn't install the scripts in ~/.conky/ change the paths to reflect the actually locations of the scripts. 
