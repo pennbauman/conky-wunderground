@@ -1,11 +1,11 @@
-${if_existing /proc/net/route wlan0}${execi 300 /usr/bin/env python2 ~/.conky/wunderground_scripts/wunderground_weather_get.py 00000}${font Inconsolata:size=12}Weather$alignr${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 0}° - ${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 1}${font}
+${if_existing /proc/net/route wlan0}${execi 300 /usr/bin/env python2 ~/.conky/wunderground_scripts/wunderground_weather_get.py 00000}Weather$alignr${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 0}° - ${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 1}
 
 ${font Inconsolata:size=10}Today's Forecast ${font}$alignr${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 2}°/${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 3}°
 ${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 4} ${alignr}${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 5}% (${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 6})
 
 ${font Inconsolata:size=10}${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/tomorrow.py}'s Forecast ${font} ${alignr} ${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 7}°/${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 8}°
 ${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 9} ${alignr}${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 10}% (${execi 20 /usr/bin/env python2 ~/.conky/wunderground_scripts/weather_file_read.py 11})
-${else}${font Inconsolata:size=14}Weather $alignr unavailable${font}
+${else}Weather $alignr unavailable
 
 ${font Inconsolata:size=10}Today's Forecast ${font} $alignr []°/[]°
 ${alignr} forecast unavailable
